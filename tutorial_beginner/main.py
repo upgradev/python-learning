@@ -8,7 +8,7 @@ def day_to_units(number_of_days):
 def validade_and_execute():
     # if user_input.isdigit():
     try:
-        user_input_number = int(user_input)
+        user_input_number = int(num_of_days_element)
         if user_input_number > 0:
             calculated_value = day_to_units(user_input_number)
             print(calculated_value)
@@ -22,10 +22,21 @@ def validade_and_execute():
 
 
 
+
+
 user_input = ""
 while user_input != "exit":
     user_input =  input("hey user, enter a number of days and i will convert it to hours:\n")
-    validade_and_execute()
+    list_of_days = user_input.split(", ")
+    print(type(user_input.split(", ")))
+    print(user_input.split(", "))
+    # for num_of_days_element in user_input.split(", "):
+    for num_of_days_element in set(list_of_days):
+        validade_and_execute()
+
+
+
+
 
 # day_to_units(20)
 # day_to_units(35)
