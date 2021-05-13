@@ -1,0 +1,14 @@
+# Python file detection handling tutorial example explained
+import os
+
+path = "test.txt"
+
+if os.path.exists(path):
+    print("that location exists")
+    if os.path.isfile(path):
+        print("that is file")
+    elif os.path.isdir(path):
+        print("that is directory")
+
+else:
+    print("that location doesn't exists")
